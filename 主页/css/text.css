@@ -1,0 +1,39 @@
+body{
+	background:url(http://i1.3conline.com/images/piclib/201112/23/batch/1/122176/13246029510012kvz98y28m.jpg);
+       padding: 0;
+       margin: 0;
+}
+.clearfix::after{
+	content: "";
+	display: block;
+	clear: both;
+	width: 0;
+	height:0;
+}
+#f{
+	max-width: 1200px;
+	min-width: 800px;
+	margin: auto;
+	
+}
+header,footer{
+	border:1px solid #fff;
+	margin: 1% 0;
+	height: 120px;
+	border:1px solid #fff;
+}
+aside,main{
+    border:1px solid #fff;
+}
+section,aside,main{
+	min-height: 500px;
+}
+aside{
+	width: 20%;
+	margin-right: 0.5%;
+	float: left;
+}
+main{
+	width: 79%;
+	float: right;
+}
