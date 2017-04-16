@@ -37,3 +37,15 @@ main{
 	width: 79%;
 	float: right;
 }
+a:link{
+	color:#fff;
+}
+a:visited{
+	color:yellow;
+}
+a:hover{
+	color:red;
+}
+a:active{
+	color:#ff0;
+}
