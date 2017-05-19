@@ -1,0 +1,49 @@
+.clearfix::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+ul {
+	padding: 0;
+	list-style-type: none;
+}
+body{
+	background: url(../img/bg.jpg) no-repeat fixed top center ;
+    min-height: 12000px;
+    color: #fff;
+}
+body h2{
+	
+}
+nav ul li a{
+	color: #fff;
+	text-decoration: none;
+}
+.logo img{
+	width: 80px;
+	height: auto;
+}
+header{
+	max-width: 1200px;
+	margin: 30px auto;
+	position: relative;
+}
+header nav{
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	}
+header nav ul li {
+	float: left;
+	margin: 20px 30px;
+}	
+header nav ul li a{
+	color: #FFFFFF;
+	padding: 10px;
+	border: 1px solid transparent;
+ transition: color .5s,border .5s;
+}
+header nav ul li a:hover{
+color: #000;	
+border: 1px solid #FFFFFF;
+}	
