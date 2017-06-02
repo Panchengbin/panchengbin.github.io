@@ -61,8 +61,7 @@ header a:hover{
 	color: #339BEB;
 }
 .banner{
-	/*min-height: 600px;*/
-	background: url(../img/banner.jpg) no-repeat top center;
+	background: url(../img/banner.jpg)  no-repeat top center;
 }
 footer{
 	text-align: center;
