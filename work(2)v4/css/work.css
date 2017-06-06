@@ -1,0 +1,215 @@
+/*v1部分*/
+.clearfix::after{
+	content: "";
+	display: table;
+	clear: both;	
+}
+a{
+	text-decoration: none;
+}
+ul{
+   list-style: none;
+   padding: 0px;
+}
+.container{
+	max-width: 1200px;
+	margin: auto;
+}
+header{
+	position: fixed;
+	padding: 20px 0px;
+	width: 100%;
+	background-color: rgba(0,0,0,0.1);
+	transition:padding .5s,background-color .5s;		
+}
+header.on{
+	padding: 5px 0px;
+	background-color: rgba(0,0,0,.6);
+}
+.logo img{
+	width: 60px;
+	height: 60px;
+}
+
+header .logo{	
+	float: left;
+}
+header .logo span{
+	font-size:3.5em;
+	font-family: 'Dancing Script', cursive;
+}
+header .logo img,
+header .logo span{
+	vertical-align: middle;
+}
+header a{
+	color: #fff;
+	text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+}
+header .topmenu{	
+	float: right;
+	margin-top: 5px;	
+}
+header .topmenu ul li{
+	float: left;
+	margin: 0px 30px;
+}
+header a{
+	color: #fff;
+	text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+}
+header a:hover{
+	color: #339BEB;
+}
+/*v2部分*/
+.banner{
+	background: url(../img/banner.jpg)  no-repeat top center;
+}
+footer{
+	text-align: center;
+}
+@font-face {
+  font-family: 'Miniver';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Miniver'), url(http://fonts-gstatic.googlefonts.net/s/miniver/v5/bkOWpAf9z_OvZFh5_5iAfA.woff) format('woff');
+}
+body{
+	min-height: 1400px;
+	font-family: "微软雅黑",simhei;
+	
+}
+h1 span {
+	color: rgb(51,155,235);
+}
+h1{
+	color: white;
+}
+.banner .a{
+    text-align: center;
+    max-width: 800px;
+    height: 180px;
+    /*margin-top: 300px;*/
+    line-height: 2.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+h1{
+	text-shadow: 1px 2px 1px rgba(0,0,0,.6);
+}
+p{
+	text-align: left;
+   display: block;
+   line-height: 1.8;
+   color: black;
+   font-family: ""微软雅黑",simhei";
+}
+p span{
+	color: black;
+	background: rgba(194,218,226,.5);
+	display: inline-block;
+	height: 25px;
+	padding: 2px 4px;
+	cursor: pointer;
+}
+p span:hover{
+	background: rgba(194,218,226,.3);
+	transition: all .5s;
+	}
+/*v3部分*/
+.about h2{
+	text-align: center;
+}
+.about h2+p{
+	text-align: center;
+}
+.about .img{
+	float: left;
+	width: 48%;
+}
+.about .img img{
+	width: 100%;
+	height: auto;
+}
+.about .note{
+	float: right;
+	width: 48%;
+	text-align: left;
+}
+.about .note p:first-child{
+	margin-top: 0px;
+}
+.about .note ul{
+	counter-reset: testname 0;
+}
+.about .note li{
+	counter-increment: testname 1;
+	position: relative;
+	padding-left: 2em;
+	cursor: pointer;
+	list-style: none;
+	line-height: 2;
+}
+.about .note li::before{
+	content:counter(testname);
+	width: 1.2em;
+	height: 1.2em;
+	border: 1px dashed #000;
+	text-align: center;
+	line-height: 1.2;
+	border-radius: 100%;
+	position: absolute;
+	left: 0px;
+	top: 0.3em;
+	transition:transform .5s;
+	transform: translate(0px);
+}
+.about .note li:hover::before{
+	transform: translate(0.5em);
+}
+/*v4部分*/
+.service .container h2,
+.service .container h2+p{
+	text-align: center;
+}
+.service{
+	min-height: 600px;
+	background: url(../img/banner2.jpg) no-repeat  center center;
+	background-size: cover;
+}
+.service .content li{
+	float: left;
+	width: 48%;
+	margin-right: 4%;
+	text-align: right;
+	cursor: pointer;
+}
+.service li::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+.service .content li:nth-child(2n){
+	float: right;
+	margin-right: 0px;
+	text-align: left;
+}
+.service .content li:nth-child(2n) i{
+	float: left;
+	padding: 20px 30px 20px 0px;
+}
+.service li i{
+	float: right;
+	padding: 20px 0px 20px 30px;
+	transition:  transform .5s,color .5s;
+}
+.service li h3{
+	display: inline-block;
+}
+.service li:nth-child(2n) h3{
+	
+}
