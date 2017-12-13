@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.menuhead{
+				border:1px #333;
+				width:200px;
+				height: 100px;
+				padding:3px 2px 2px 10px;
+				background-color: rgba(100,100,100,0.3);
+				position: relative;
+				margin-left:30%;
+				
+			}
+			.menu{
+				overflow:hidden;
+				position: absolute;
+				top: 30px;
+			}
+			a{
+				display:block;
+				font-size:15px;
+				line-height:20px;
+				text-decoration:none;
+				color:#fff;
+				
+			}
+            .menuhead h3{
+            	position: absolute;
+            	margin: 0px;
+            }
+		</style>
+	</head>
+	<body>
+		<div class="menuhead">
+			<h3 >滕王阁序</h3>
+			<div class="menu">
+				<a >滕王高阁临江渚，</a>
+				<a >佩玉鸣鸾罢歌舞。</a>
+				<a >画栋朝飞南浦云，</a>
+				<a >珠帘暮卷西山雨。</a>
+				<a >闲云潭影日悠悠，</a>
+				<a >物换星移几度秋。</a>
+				<a >阁中帝子今何在？</a>
+				<a >槛外长江空自流。</a>
+			</div>
+		</div>
+		<script type="text/javascript">
+			 var n=3,
+				oMenu=document.querySelector(".menu"),
+				oMenuItem=document.querySelectorAll(".menu a"),
+				runHeight=oMenuItem[0].offsetHeight*n,
+				runFlag=true;
+			
+			oMenu.style.height=runHeight+"px";
+			oMenu.innerHTML+=oMenu.innerHTML;
+			
+			oMenu.addEventListener("mouseover",function(){runFlag=false});
+			oMenu.addEventListener("mouseout",function(){runFlag=true});
+			(function(){
+				var stop=oMenu.scrollTop%runHeight==0&&!runFlag;
+				if(!stop){
+					parseInt(oMenu.scrollTop)==parseInt(oMenu.scrollHeight/2)?oMenu.scrollTop=0:oMenu.scrollTop++;
+				}
+				setTimeout(arguments.callee,oMenu.scrollTop%runHeight==0?1000:10);
+			})();
+
+		</script>
+	</body>
+</html>
